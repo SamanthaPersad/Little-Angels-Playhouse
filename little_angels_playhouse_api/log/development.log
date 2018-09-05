@@ -1,0 +1,1204 @@
+  [1m[35m (544.4ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (619.6ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (27.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateClassrooms (20180905155847)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (41.2ms)[0m  [1m[35mCREATE TABLE "classrooms" ("id" bigserial primary key, "address" character varying, "monthly_fee" integer, "sqft" integer, "class_size" integer, "provide_meals" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905155847_create_classrooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (5.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905155847"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (6.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-05 16:01:38.245014"], ["updated_at", "2018-09-05 16:01:38.245014"]]
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mClassroom Destroy (28.8ms)[0m  [1m[31mDELETE FROM "classrooms"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mClassroom Destroy (0.6ms)[0m  [1m[31mDELETE FROM "classrooms"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mClassroom Create (0.9ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "25 Sterns Lane, Copiague NY, 11420"], ["monthly_fee", 3000], ["sqft", 6000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 16:07:30.300806"], ["updated_at", "2018-09-05 16:07:30.300806"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+Started GET "/" for 127.0.0.1 at 2018-09-05 12:08:09 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (8.2ms)
+Completed 200 OK in 31ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/classrooms" for 127.0.0.1 at 2018-09-05 12:08:18 -0400
+Processing by ClassroomsController#index as HTML
+  [1m[36mClassroom Load (6.6ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms"[0m
+  ↳ app/controllers/classrooms_controller.rb:8
+Completed 200 OK in 39ms (Views: 18.9ms | ActiveRecord: 16.7ms)
+
+
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20180905161855)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (19.5ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "age" integer, "class_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905161855_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905161855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (6.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mClassroom Destroy (6.1ms)[0m  [1m[31mDELETE FROM "classrooms"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mClassroom Create (0.8ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "25 Sterns Lane, Copiague NY, 11420"], ["monthly_fee", 3000], ["sqft", 6000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 16:19:12.612459"], ["updated_at", "2018-09-05 16:19:12.612459"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+Started GET "/classrooms" for 127.0.0.1 at 2018-09-05 12:19:24 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ClassroomsController#index as HTML
+  [1m[36mClassroom Load (0.6ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms"[0m
+  ↳ app/controllers/classrooms_controller.rb:8
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-05 12:19:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-09-05 12:19:29 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (4.9ms)
+Completed 200 OK in 16ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-09-05 12:19:37 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:8
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 2.3ms)
+
+
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/classrooms" for 127.0.0.1 at 2018-09-05 13:27:13 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ClassroomsController#index as HTML
+  [1m[36mClassroom Load (0.8ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms"[0m
+  ↳ app/controllers/classrooms_controller.rb:8
+Completed 200 OK in 22ms (Views: 12.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/classrooms/all" for 127.0.0.1 at 2018-09-05 13:27:28 -0400
+Processing by ClassroomsController#show as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mClassroom Load (0.5ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/classrooms_controller.rb:44
+Completed 404 Not Found in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Classroom with 'id'=all):
+  
+app/controllers/classrooms_controller.rb:44:in `set_classroom'
+Started GET "/classrooms" for 127.0.0.1 at 2018-09-05 13:27:36 -0400
+Processing by ClassroomsController#index as HTML
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms"[0m
+  ↳ app/controllers/classrooms_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (200.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (225.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (565.5ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (547.2ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateClassrooms (20180905155847)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE "classrooms" ("id" bigserial primary key, "address" character varying, "monthly_fee" integer, "sqft" integer, "class_size" integer, "provide_meals" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905155847_create_classrooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905155847"]]
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20180905161855)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "age" integer, "class_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905161855_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905161855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-05 17:31:05.221941"], ["updated_at", "2018-09-05 17:31:05.221941"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mClassroom Destroy (0.8ms)[0m  [1m[31mDELETE FROM "classrooms"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (214.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (216.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (449.8ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (488.4ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateClassrooms (20180905155847)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "classrooms" ("id" bigserial primary key, "address" character varying, "monthly_fee" integer, "sqft" integer, "class_size" integer, "provide_meals" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905155847_create_classrooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905155847"]]
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20180905161855)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "age" integer, "class_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905161855_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905161855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-05 17:35:27.826985"], ["updated_at", "2018-09-05 17:35:27.826985"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mClassroom Destroy (0.7ms)[0m  [1m[31mDELETE FROM "classrooms"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.8ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "FFaker::AddressUS.street_address +  + FFaker::AddressUS.street_suffix + \"\\n\" + FFaker::AddressUS.secondary_address"], ["monthly_fee", 3000], ["sqft", 6000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 17:35:33.120667"], ["updated_at", "2018-09-05 17:35:33.120667"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "FFaker::AddressUS.street_address +  + FFaker::AddressUS.street_suffix + \"\\n\" + FFaker::AddressUS.secondary_address"], ["monthly_fee", 3000], ["sqft", 6000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 17:35:33.129871"], ["updated_at", "2018-09-05 17:35:33.129871"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "FFaker::AddressUS.street_address +  + FFaker::AddressUS.street_suffix + \"\\n\" + FFaker::AddressUS.secondary_address"], ["monthly_fee", 3000], ["sqft", 6000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 17:35:33.133863"], ["updated_at", "2018-09-05 17:35:33.133863"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "FFaker::AddressUS.street_address +  + FFaker::AddressUS.street_suffix + \"\\n\" + FFaker::AddressUS.secondary_address"], ["monthly_fee", 3000], ["sqft", 6000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 17:35:33.137806"], ["updated_at", "2018-09-05 17:35:33.137806"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "FFaker::AddressUS.street_address +  + FFaker::AddressUS.street_suffix + \"\\n\" + FFaker::AddressUS.secondary_address"], ["monthly_fee", 3000], ["sqft", 6000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 17:35:33.141591"], ["updated_at", "2018-09-05 17:35:33.141591"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.5ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "FFaker::AddressUS.street_address +  + FFaker::AddressUS.street_suffix + \"\\n\" + FFaker::AddressUS.secondary_address"], ["monthly_fee", 3000], ["sqft", 6000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 17:35:33.145590"], ["updated_at", "2018-09-05 17:35:33.145590"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.5ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "FFaker::AddressUS.street_address +  + FFaker::AddressUS.street_suffix + \"\\n\" + FFaker::AddressUS.secondary_address"], ["monthly_fee", 3000], ["sqft", 6000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 17:35:33.149649"], ["updated_at", "2018-09-05 17:35:33.149649"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "FFaker::AddressUS.street_address +  + FFaker::AddressUS.street_suffix + \"\\n\" + FFaker::AddressUS.secondary_address"], ["monthly_fee", 3000], ["sqft", 6000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 17:35:33.153559"], ["updated_at", "2018-09-05 17:35:33.153559"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "FFaker::AddressUS.street_address +  + FFaker::AddressUS.street_suffix + \"\\n\" + FFaker::AddressUS.secondary_address"], ["monthly_fee", 3000], ["sqft", 6000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 17:35:33.157099"], ["updated_at", "2018-09-05 17:35:33.157099"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "FFaker::AddressUS.street_address +  + FFaker::AddressUS.street_suffix + \"\\n\" + FFaker::AddressUS.secondary_address"], ["monthly_fee", 3000], ["sqft", 6000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 17:35:33.160936"], ["updated_at", "2018-09-05 17:35:33.160936"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+Started GET "/students" for 127.0.0.1 at 2018-09-05 13:36:00 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (3.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:8
+Completed 200 OK in 11ms (Views: 2.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/classrooms" for 127.0.0.1 at 2018-09-05 13:36:07 -0400
+Processing by ClassroomsController#index as HTML
+  [1m[36mClassroom Load (0.9ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms"[0m
+  ↳ app/controllers/classrooms_controller.rb:8
+Completed 200 OK in 24ms (Views: 13.3ms | ActiveRecord: 7.8ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (149.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (180.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (535.1ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (470.4ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateClassrooms (20180905155847)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "classrooms" ("id" bigserial primary key, "address" character varying, "monthly_fee" integer, "sqft" integer, "class_size" integer, "provide_meals" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905155847_create_classrooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905155847"]]
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20180905161855)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "age" integer, "class_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905161855_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905161855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-05 17:37:07.566338"], ["updated_at", "2018-09-05 17:37:07.566338"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (189.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (220.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (523.3ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (437.0ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateClassrooms (20180905155847)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "classrooms" ("id" bigserial primary key, "address" character varying, "monthly_fee" integer, "sqft" integer, "class_size" integer, "provide_meals" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905155847_create_classrooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905155847"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20180905161855)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "age" integer, "class_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905161855_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905161855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-05 17:37:55.233071"], ["updated_at", "2018-09-05 17:37:55.233071"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (227.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (198.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (613.4ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (494.3ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateClassrooms (20180905155847)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "classrooms" ("id" bigserial primary key, "address" character varying, "monthly_fee" integer, "sqft" integer, "class_size" integer, "provide_meals" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905155847_create_classrooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905155847"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20180905161855)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "age" integer, "class_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905161855_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905161855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-05 17:41:40.286196"], ["updated_at", "2018-09-05 17:41:40.286196"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (214.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (220.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (517.4ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (397.8ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateClassrooms (20180905155847)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "classrooms" ("id" bigserial primary key, "address" character varying, "monthly_fee" integer, "sqft" integer, "class_size" integer, "provide_meals" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905155847_create_classrooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905155847"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20180905161855)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "age" integer, "class_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905161855_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905161855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-05 17:43:03.881017"], ["updated_at", "2018-09-05 17:43:03.881017"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mStudent Destroy (0.6ms)[0m  [1m[31mDELETE FROM "students"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mClassroom Destroy (0.6ms)[0m  [1m[31mDELETE FROM "classrooms"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (208.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (202.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (488.5ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (508.8ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateClassrooms (20180905155847)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "classrooms" ("id" bigserial primary key, "address" character varying, "monthly_fee" integer, "sqft" integer, "class_size" integer, "provide_meals" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905155847_create_classrooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905155847"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20180905161855)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "age" integer, "class_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905161855_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905161855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-05 17:44:47.817229"], ["updated_at", "2018-09-05 17:44:47.817229"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mStudent Destroy (0.7ms)[0m  [1m[31mDELETE FROM "students"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mClassroom Destroy (0.5ms)[0m  [1m[31mDELETE FROM "classrooms"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (215.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (196.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (551.2ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (509.3ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateClassrooms (20180905155847)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "classrooms" ("id" bigserial primary key, "address" character varying, "monthly_fee" integer, "sqft" integer, "class_size" integer, "provide_meals" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905155847_create_classrooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905155847"]]
+  ↳ bin/rails:9
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20180905161855)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "age" integer, "class_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905161855_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905161855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-05 17:51:50.598634"], ["updated_at", "2018-09-05 17:51:50.598634"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mStudent Destroy (0.7ms)[0m  [1m[31mDELETE FROM "students"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mClassroom Destroy (0.6ms)[0m  [1m[31mDELETE FROM "classrooms"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (217.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (239.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (531.7ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (444.1ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateClassrooms (20180905155847)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE TABLE "classrooms" ("id" bigserial primary key, "address" character varying, "monthly_fee" integer, "sqft" integer, "class_size" integer, "provide_meals" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905155847_create_classrooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905155847"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20180905161855)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (21.6ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "age" integer, "class_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905161855_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905161855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-05 18:05:07.632420"], ["updated_at", "2018-09-05 18:05:07.632420"]]
+  ↳ bin/rails:9
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (220.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (214.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "little_angels_playhouse_api_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (526.0ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (519.7ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateClassrooms (20180905155847)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE "classrooms" ("id" bigserial primary key, "address" character varying, "monthly_fee" integer, "sqft" integer, "class_size" integer, "provide_meals" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905155847_create_classrooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905155847"]]
+  ↳ bin/rails:9
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateStudents (20180905161855)
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "students" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "age" integer, "class_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180905161855_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180905161855"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-05 18:07:03.618856"], ["updated_at", "2018-09-05 18:07:03.618856"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (6.1ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "600 Old Country Road, Hicksville, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:12:19.570698"], ["updated_at", "2018-09-05 18:12:19.570698"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "little_angels_playhouse_api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3468371388506604720)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.7ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "600 Old Country Road, Hicksville, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:14:01.984056"], ["updated_at", "2018-09-05 18:14:01.984056"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.6ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "600 Old Country Road, Hicksville, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:15:16.949811"], ["updated_at", "2018-09-05 18:15:16.949811"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+Started GET "/classrooms" for 127.0.0.1 at 2018-09-05 14:16:18 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ClassroomsController#index as HTML
+  [1m[36mClassroom Load (0.5ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms"[0m
+  ↳ app/controllers/classrooms_controller.rb:8
+Completed 200 OK in 19ms (Views: 10.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/classrooms/all" for 127.0.0.1 at 2018-09-05 14:16:30 -0400
+Processing by ClassroomsController#show as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" WHERE "classrooms"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/classrooms_controller.rb:44
+Completed 404 Not Found in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Classroom with 'id'=all):
+  
+app/controllers/classrooms_controller.rb:44:in `set_classroom'
+Started GET "/classrooms" for 127.0.0.1 at 2018-09-05 14:16:36 -0400
+Processing by ClassroomsController#index as HTML
+  [1m[36mClassroom Load (0.4ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms"[0m
+  ↳ app/controllers/classrooms_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-09-05 14:16:49 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (3.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:8
+Completed 200 OK in 16ms (Views: 2.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/students/all" for 127.0.0.1 at 2018-09-05 14:16:54 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:44
+Completed 404 Not Found in 4ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=all):
+  
+app/controllers/students_controller.rb:44:in `set_student'
+Started GET "/" for 127.0.0.1 at 2018-09-05 14:16:59 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-09-05 14:26:09 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:8
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/classrooms" for 127.0.0.1 at 2018-09-05 14:26:15 -0400
+Processing by ClassroomsController#index as HTML
+  [1m[36mClassroom Load (0.6ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms"[0m
+  ↳ app/controllers/classrooms_controller.rb:8
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2018-09-05 14:28:56 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.6ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "600 Old Country Road, Hicksville, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:30:31.942748"], ["updated_at", "2018-09-05 18:30:31.942748"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.6ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "25 Sterns Lane, Copiague, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:38.302017"], ["updated_at", "2018-09-05 18:34:38.302017"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "10 Broadway St, Manhattan, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:38.310717"], ["updated_at", "2018-09-05 18:34:38.310717"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.5ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "244 Upper East Side, Manhattan, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:38.314179"], ["updated_at", "2018-09-05 18:34:38.314179"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "12 Abunderale Ave, Valley Stream, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:38.317710"], ["updated_at", "2018-09-05 18:34:38.317710"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "98 Chambers St, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:38.321475"], ["updated_at", "2018-09-05 18:34:38.321475"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "135-12 Rockaway Blvd, Queens, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:38.325626"], ["updated_at", "2018-09-05 18:34:38.325626"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.5ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "14th Street, Union Ave, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:38.329086"], ["updated_at", "2018-09-05 18:34:38.329086"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.5ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "600 Old Country Road, Hicksville, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:38.332675"], ["updated_at", "2018-09-05 18:34:38.332675"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.7ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "25 Sterns Lane, Copiague, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:53.789125"], ["updated_at", "2018-09-05 18:34:53.789125"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.3ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "10 Broadway St, Manhattan, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:53.797962"], ["updated_at", "2018-09-05 18:34:53.797962"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "244 Upper East Side, Manhattan, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:53.801191"], ["updated_at", "2018-09-05 18:34:53.801191"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "12 Abunderale Ave, Valley Stream, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:53.804714"], ["updated_at", "2018-09-05 18:34:53.804714"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "98 Chambers St, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:53.807999"], ["updated_at", "2018-09-05 18:34:53.807999"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.4ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "135-12 Rockaway Blvd, Queens, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:53.811629"], ["updated_at", "2018-09-05 18:34:53.811629"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.3ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "14th Street, Union Ave, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:53.815042"], ["updated_at", "2018-09-05 18:34:53.815042"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mClassroom Create (0.3ms)[0m  [1m[32mINSERT INTO "classrooms" ("address", "monthly_fee", "sqft", "class_size", "provide_meals", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["address", "600 Old Country Road, Hicksville, NY"], ["monthly_fee", 6000], ["sqft", 7000], ["class_size", 15], ["provide_meals", true], ["created_at", "2018-09-05 18:34:53.818487"], ["updated_at", "2018-09-05 18:34:53.818487"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+  [1m[36mClassroom Load (0.6ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mClassroom Load (0.9ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mClassroom Load (0.5ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" ORDER BY "classrooms"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mClassroom Load (0.8ms)[0m  [1m[34mSELECT  "classrooms".* FROM "classrooms" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mClassroom Load (0.8ms)[0m  [1m[34mSELECT "classrooms".* FROM "classrooms"[0m
