@@ -1,5 +1,5 @@
 class ClassroomsController < ApplicationController
-  before_action :set_classroom, only: [:show, :update, :destroy]
+  
 
   # GET /classrooms
   def index
@@ -10,39 +10,42 @@ class ClassroomsController < ApplicationController
 
   # GET /classrooms/1
   def show
-    render json: @classroom
+    @classroom = Classroom.find(params[:id])
+    render json: {message: @classroom}
   end
 
   # POST /classrooms
   def create
     @classroom = Classroom.new(classroom_params)
-
     if @classroom.save
-      render json: @classroom, status: :created, location: @classroom
+      render json: {message: classroom_params}
     else
-      render json: @classroom.errors, status: :unprocessable_entity
+      render json: {message: "Error"}
     end
   end
 
   # PATCH/PUT /classrooms/1
   def update
+    @classroom = Classroom.find(params[:id])
     if @classroom.update(classroom_params)
-      render json: @classroom
+      render json: {message: @classroom}
     else
-      render json: @classroom.errors, status: :unprocessable_entity
+      render json: {message: "Error"}
     end
   end
 
   # DELETE /classrooms/1
   def destroy
-    @classroom.destroy
+    classroom = Classroom.find(params[:id])
+    if classroom.destroy
+      render json: {mesage: "destroyed"}
+    else 
+      render json: {message: "Error"}
   end
 
+end
+
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_classroom
-      @classroom = Classroom.find(params[:id])
-    end
 
     # Only allow a trusted parameter "white list" through.
     def classroom_params
