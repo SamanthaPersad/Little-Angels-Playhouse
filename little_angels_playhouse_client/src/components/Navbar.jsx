@@ -5,14 +5,13 @@ const Navbar = (props) => {
 
        <ul>
 <li><a href="#" class="active">Home</a></li>
-<li class="dropdown"><a href="dropbtn" href="#">Drop</a></li>
+<li class="dropdown"><a href="dropbtn" href="#">About</a></li>
 <div class="content"> </div>
-   <a href="#">About</a>
    <a href="#">Experience</a>
    <a href="#">Contact</a>
 
 
-<li><a href="#"></a>Next</li>
+<li><a href="#"></a>Contact</li>
 </ul>
     )
 }
