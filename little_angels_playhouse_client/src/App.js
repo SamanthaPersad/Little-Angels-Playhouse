@@ -298,6 +298,7 @@ class App extends Component {
     return (
       <div className="App">
       <Navbar
+      toggleHome={this.toggleHome}
       toggleForm={this.toggleForm}//turning on and off , making changes
       toggleAbout={this.toggleAbout}
       toggleExperience={this.toggleExperience}
@@ -305,7 +306,8 @@ class App extends Component {
       />
       
         
-       
+        {this.state.showHome && 
+        <Home/>}
         {this.state.showAbout && 
         <About/>}
         {this.state.showExperience && 
