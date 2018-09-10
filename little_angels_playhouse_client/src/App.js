@@ -144,11 +144,24 @@ class App extends Component {
 
   }
 
+  toggleHome() {
+    this.setState ((prevState )=> {
+      return {
+      showHome : !prevState.showHome, //prevState is current state before changes
+      showAbout : false,
+      showForm : false, 
+      showExperience : false,
+      showContact : false
+      }
+    })
+  }
+
   toggleForm() {
     this.setState ((prevState )=> {
       return {
       showForm : !prevState.showForm, //prevState is current state before changes
       showAbout : false,
+      showHome : false,
       showExperience : false,
       showContact : false
       }
@@ -160,6 +173,7 @@ class App extends Component {
       return {
       showAbout : !prevState.showAbout, //prevState is current state before changes
       showForm : false,
+      showHome : false,
       showExperience : false,
       showContact : false
       }
@@ -172,7 +186,8 @@ class App extends Component {
       showExperience : !prevState.showExperience, //prevState is current state before changes
       showForm : false,
       showContact : false,
-      showAbout : false
+      showAbout : false,
+      showHome : false
       }
     })
   }
@@ -183,6 +198,7 @@ class App extends Component {
       showContact : !prevState.showContact, //prevState is current state before changes
       showAbout : false,
       showForm : false,
+      showHome : false,
       showExperience : false
       }
     })
