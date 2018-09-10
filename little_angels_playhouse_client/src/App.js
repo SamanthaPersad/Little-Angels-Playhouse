@@ -132,9 +132,11 @@ class App extends Component {
   }
 
   toggleForm() {
-    console.log("setState")
+    console.log("setState", this.state.showForm)
     this.setState ((prevState )=> {
+      return {
       showForm : !prevState.showForm //prevState is current state before changes
+      }
     })
   }
 
@@ -208,6 +210,10 @@ class App extends Component {
   componentDidMount() {
     this.isLoggedIn()
     this.getStudents()
+  }
+
+  componentDidUpdate() {
+    console.log("hi");
   }
 
   render() {
