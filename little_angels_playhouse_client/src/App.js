@@ -5,7 +5,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Student from './components/Student';
 import Login from './components/Login';
-// import Header from './components/Header';
+
 import StudentForm from './components/StudentForm';
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
@@ -44,6 +44,7 @@ class App extends Component {
     this.showRegisterForm = this.showRegisterForm.bind(this)
     this.toggleForm = this.toggleForm.bind(this)
     this.toggleAbout = this.toggleAbout.bind(this)
+    this.toggleContact = this.toggleContact.bind(this)
   }
 
   cancel() {
@@ -51,7 +52,7 @@ class App extends Component {
       name:'',
       sugar:'',
       isEdit:false,
-      selectedJuiceId:null,
+      selectedStudentId:null,
     })
   }
   
@@ -137,19 +138,31 @@ class App extends Component {
   }
 
   toggleForm() {
-    console.log("setState", this.state.showForm)
     this.setState ((prevState )=> {
       return {
-      showForm : !prevState.showForm //prevState is current state before changes
+      showForm : !prevState.showForm, //prevState is current state before changes
+      showAbout : false,
+      showContact : false
       }
     })
   }
 
   toggleAbout() {
-    console.log("setState", this.state.showAbout)
     this.setState ((prevState )=> {
       return {
-      showAbout : !prevState.showAbout //prevState is current state before changes
+      showAbout : !prevState.showAbout, //prevState is current state before changes
+      showForm : false,
+      showContact : false
+      }
+    })
+  }
+
+  toggleContact() {
+    this.setState ((prevState )=> {
+      return {
+      showContact : !prevState.showContact, //prevState is current state before changes
+      showAbout : false,
+      showForm : false
       }
     })
   }
@@ -250,12 +263,15 @@ class App extends Component {
       <Navbar
       toggleForm={this.toggleForm}//turning on and off , making changes
       toggleAbout={this.toggleAbout}
+      toggleContact={this.toggleContact}
       />
       
         
        
         {this.state.showAbout && 
         <About/>}
+        {this.state.showContact && 
+        <Contact/>}
       
         <div> {display} </div>
         {this.state.showForm &&
