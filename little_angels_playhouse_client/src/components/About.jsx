@@ -2,10 +2,11 @@ import React from 'react';
 
 const About = (props) => {
     
+    
     return (
 
 <div>
-    <h1>The Story of Little Angels Playhouse</h1>
+    <h3>The Story of Little Angels Playhouse</h3>
 <p>
 For more than 30 years, the founders of Little Angels Playhouse®, the Weissman family, have been positively 
 impacting the lives of children by developing and implementing ground-breaking care and early education 
