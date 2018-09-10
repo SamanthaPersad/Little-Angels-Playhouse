@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Student from './components/Student';
 import Login from './components/Login';
-import Header from './components/Header';
+// import Header from './components/Header';
 import StudentForm from './components/StudentForm';
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
@@ -110,7 +110,7 @@ class App extends Component {
   edit(id) {
       console.log(id);
     const jwt = localStorage.getItem("jwt")
-    const body = {"first_name": this.state.first_name, "last_name": this.state.last_name, "age": this.state.age, "class_id": this.state.class_id};
+    const body = {"Authorization": `Bearer ${jwt}`, "first_name": this.state.first_name, "last_name": this.state.last_name, "age": this.state.age, "class_id": this.state.class_id};
     const init = {
       headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
       method: 'PUT',
@@ -132,6 +132,7 @@ class App extends Component {
   }
 
   toggleForm() {
+    console.log("setState")
     this.setState ((prevState )=> {
       showForm : !prevState.showForm //prevState is current state before changes
     })
@@ -210,7 +211,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.students);
+    console.log("students");
     const display = this.state.isLoggedIn ? this.state.students.map(student => {
           return (<Student 
           key={student.id} 
