@@ -1,19 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
     return (
 
        <ul>
 <li><a href="#" class="active">Home</a></li>
-<li class="dropdown"><a href="dropbtn" href="#">About</a></li>
-<div class="content"> </div>
-   <a href="#">Experience</a>
-   <a href="#">Contact</a>
-
-
-<li><a href="#"></a>Contact</li>
+<li><a href="#" class="active">About</a></li>
+<li><a href="#" class="active">Experience</a></li>
+<li><a href="#" class="active">Contact</a></li>
+<li><button onClick={props.toggleForm } class="active">Register</button></li>
 </ul>
+
     )
 }
 

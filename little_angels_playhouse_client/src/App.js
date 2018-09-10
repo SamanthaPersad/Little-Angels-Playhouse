@@ -12,6 +12,7 @@ class App extends Component {
     super();
 
     this.state = {
+      showForm : false, 
       students: [],
       email: '',
       password:'',
@@ -37,6 +38,7 @@ class App extends Component {
     this.cancel = this.cancel.bind(this)
     this.register = this.register.bind(this)
     this.showRegisterForm = this.showRegisterForm.bind(this)
+    this.toggleForm = this.toggleForm.bind(this)
   }
 
   cancel() {
@@ -127,6 +129,12 @@ class App extends Component {
     }))
     .catch(err => err.message)
 
+  }
+
+  toggleForm() {
+    this.setState ((prevState )=> {
+      showForm : !prevState.showForm //prevState is current state before changes
+    })
   }
 
   submitNew() {
@@ -221,13 +229,17 @@ class App extends Component {
                  />
     return (
       <div className="App">
-      <Navbar/>
+      <Navbar
+      toggleForm={this.toggleForm}//turning on and off , making changes
+      />
+      
         {/* <Header 
         logout={this.logout} 
         create={this.create}
         showRegisterForm={this.showRegisterForm}
         /> */}
         <div> {display} </div>
+        {this.state.showForm &&
         <StudentForm 
         handleChange={this.handleChange} 
         submitNew={this.submitNew}
@@ -238,8 +250,8 @@ class App extends Component {
         isEdit={this.state.isEdit}
         id={this.state.selectedStudentId}
         edit={this.edit}
-        cancel={this.cancel}
-        />
+        cancel={this.cancel} 
+        />}
       </div>
     );
   }
