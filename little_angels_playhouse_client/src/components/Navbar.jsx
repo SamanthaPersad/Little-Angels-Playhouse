@@ -5,14 +5,14 @@ const Navbar = (props) => {
     return (
 
        <ul>
-<li><Link href="#" class="active">Home</Link></li>
-<li class="dropdown"><Link href="dropbtn" href="#">About</Link></li>
+<li><a href="#" class="active">Home</a></li>
+<li class="dropdown"><a href="dropbtn" href="#">About</a></li>
 <div class="content"> </div>
-   <Link href="#">Experience</Link>
-   <Link href="#">Contact</Link>
+   <a href="#">Experience</a>
+   <a href="#">Contact</a>
 
 
-<li><Link href="#"></Link>Contact</li>
+<li><a href="#"></a>Contact</li>
 </ul>
     )
 }
