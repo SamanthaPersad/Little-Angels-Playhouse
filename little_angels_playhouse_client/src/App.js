@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
 import About from './components/About';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
@@ -15,6 +16,7 @@ class App extends Component {
     super();
 
     this.state = {
+      showHome : false,
       showForm : false, 
       showAbout: false,
       showExperience: false,
@@ -44,6 +46,7 @@ class App extends Component {
     this.cancel = this.cancel.bind(this)
     this.register = this.register.bind(this)
     this.showRegisterForm = this.showRegisterForm.bind(this)
+    this.toggleHome = this.toggleHome.bind(this)
     this.toggleForm = this.toggleForm.bind(this)
     this.toggleAbout = this.toggleAbout.bind(this)
     this.toggleExperience = this.toggleExperience.bind(this)
