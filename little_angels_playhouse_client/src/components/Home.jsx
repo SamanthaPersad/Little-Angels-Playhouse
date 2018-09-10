@@ -4,7 +4,7 @@ const Home = (props) => {
     
     return (
 
-<div><h1>hi</h1>
+<div><h1><i>Little Angels Playhouse</i></h1>
     </div>
     )
 }
