@@ -4,8 +4,9 @@ const Contact = (props) => {
     
     return (
 
-      <div>
-        <h3>Contact Us</h3>
+      <center><div>
+          <img src="http://www.lafayettecountyhealth.org/Tree-of-Hands.gif" alt="daycare"/>
+        <h3 class="contact">Contact Us</h3>
         <h5>Mailing Address</h5>
         <h5>LittleAngels Playhouse®</h5>
         <h5>210 Hillsboro Technology Drive</h5>
@@ -27,7 +28,7 @@ const Contact = (props) => {
         <h5>LAP Salsburg</h5>
         <h5>LAP@Stir-communications.com</h5>
         <h5>(561) 386-8064</h5>
-       </div>
+       </div></center>
     )
 }
 

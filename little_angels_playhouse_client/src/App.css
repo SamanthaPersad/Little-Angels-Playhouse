@@ -10,7 +10,28 @@ ul{
   background: #0072BB;
 }
  
-
+.header{
+  color: blueviolet;
+  font-style: oblique;
+}
+.about{
+  color: blueviolet;
+}
+.experience{
+  color: blueviolet;
+}
+.contact{
+  color: blueviolet;
+}
+.register{
+  color: blueviolet;
+}
+.pic{
+  border-radius: 100%;
+}
+.pic1{
+  border-radius: 100%;
+}
 
 
 

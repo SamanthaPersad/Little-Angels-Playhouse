@@ -4,10 +4,13 @@ const style = {
   top: '200px',
   left:'200px',
   border: 'solid black 1px',
+  background: '#d580ff',
+
 }
 
 
 const StudentForm = (props) => {
+  
     console.log(props);
 const button = props.isEdit ? <div>
                               <button onClick={() => props.edit(props.id)}>Submit edit</button>
@@ -18,8 +21,9 @@ const button = props.isEdit ? <div>
                               <button onClick={props.cancel}>Clear</button>
                               </div>
 return(
+  
 <div className="studentForm" style={style}>
-  <h3> Student Form </h3>
+ <h3> Student Form </h3>
   <form>
     <label htmlFor="first_name">First Name:</label>
     <input 
@@ -57,5 +61,6 @@ return(
 </div>
 )
 }
+
 
 export default StudentForm

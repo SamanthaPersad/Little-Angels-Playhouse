@@ -3,8 +3,10 @@ import React from 'react';
 const Experience = (props) => {
     
     return (
-        <div>
-            <h3>Little Angels Learning Experience</h3>
+<center><div>
+            <h3 class="experience">Little Angels Learning Experience</h3>
+
+            <img class="pic1" src="https://i1.wp.com/www.heartpointe.com/wp-content/uploads/2017/02/Children-Daycare.jpg" alt="daycare"/>
             <p>
             L.A.L.E.® Curriculum
 The Learning Experience's proprietary L.E.A.P. Curriculum was developed over 30 years with your child's optimal development in mind. Today, our Learning Experience Academic Program includes sign language for infants and toddlers, a phonics program, foreign language programs, manners and etiquette, physical fitness, and a philanthropy program that teaches children the value of selflessness and giving. All programs and lessons at TLE® are designed to make learning fun! And nothing is more fun than our L.E.A.P. Interactive boards that use touch-screen technology and interactive learning games to further enhance and engage children in our L.E.A.P. Curriculum programs.
@@ -19,7 +21,7 @@ To learn more about these programs, please click on our Curriculum Wheel below.
 
 * at participating centers
             </p>
-            </div>
+            </div></center>
 
     )
 }
