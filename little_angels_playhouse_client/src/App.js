@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import About from './components/About';
+import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Student from './components/Student';
 import Login from './components/Login';
@@ -16,6 +17,7 @@ class App extends Component {
     this.state = {
       showForm : false, 
       showAbout: false,
+      showExperience: false,
       showContact: false,
       students: [],
       email: '',
