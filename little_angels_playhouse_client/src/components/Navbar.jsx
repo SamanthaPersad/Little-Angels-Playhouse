@@ -5,7 +5,7 @@ const Navbar = (props) => {
 
        <ul>
 <li><a href="#" className="active">Home</a></li>
-<li><a href="#" className="active">About</a></li>
+<li><button onClick={props.toggleAbout } className="active">About</button></li>
 <li><a href="#" className="active">Experience</a></li>
 <li><a href="#" className="active">Contact</a></li>
 <li><button onClick={props.toggleForm } className="active">Register</button></li>

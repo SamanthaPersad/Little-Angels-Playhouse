@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
+import About from './components/About';
+import Contact from './components/Contact';
 import Student from './components/Student';
 import Login from './components/Login';
 // import Header from './components/Header';
@@ -13,6 +15,8 @@ class App extends Component {
 
     this.state = {
       showForm : false, 
+      showAbout: false,
+      showContact: false,
       students: [],
       email: '',
       password:'',
@@ -39,6 +43,7 @@ class App extends Component {
     this.register = this.register.bind(this)
     this.showRegisterForm = this.showRegisterForm.bind(this)
     this.toggleForm = this.toggleForm.bind(this)
+    this.toggleAbout = this.toggleAbout.bind(this)
   }
 
   cancel() {
@@ -140,6 +145,15 @@ class App extends Component {
     })
   }
 
+  toggleAbout() {
+    console.log("setState", this.state.showAbout)
+    this.setState ((prevState )=> {
+      return {
+      showAbout : !prevState.showAbout //prevState is current state before changes
+      }
+    })
+  }
+
   submitNew() {
     const jwt = localStorage.getItem("jwt")
     const body = {"first_name": this.state.first_name, "last_name": this.state.last_name, "age": this.state.age, "class_id": this.state.class_id};
@@ -212,9 +226,6 @@ class App extends Component {
     this.getStudents()
   }
 
-  componentDidUpdate() {
-    console.log("hi");
-  }
 
   render() {
     console.log("students");
@@ -238,13 +249,14 @@ class App extends Component {
       <div className="App">
       <Navbar
       toggleForm={this.toggleForm}//turning on and off , making changes
+      toggleAbout={this.toggleAbout}
       />
       
-        {/* <Header 
-        logout={this.logout} 
-        create={this.create}
-        showRegisterForm={this.showRegisterForm}
-        /> */}
+        
+       
+        {this.state.showAbout && 
+        <About/>}
+      
         <div> {display} </div>
         {this.state.showForm &&
         <StudentForm 

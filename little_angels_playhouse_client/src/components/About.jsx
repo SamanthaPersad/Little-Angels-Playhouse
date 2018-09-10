@@ -5,7 +5,7 @@ const About = (props) => {
     return (
 
 <div>
-    <h1>The Story of The Learning Experience<h1>
+    <h1>The Story of The Learning Experience</h1>
 <p>
 For more than 30 years, the founders of The Learning Experience®, the Weissman family, have been positively 
 impacting the lives of children by developing and implementing ground-breaking care and early education 
