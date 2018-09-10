@@ -46,7 +46,9 @@ class App extends Component {
     this.showRegisterForm = this.showRegisterForm.bind(this)
     this.toggleForm = this.toggleForm.bind(this)
     this.toggleAbout = this.toggleAbout.bind(this)
+    this.toggleExperience = this.toggleExperience.bind(this)
     this.toggleContact = this.toggleContact.bind(this)
+    
   }
 
   cancel() {
@@ -144,6 +146,7 @@ class App extends Component {
       return {
       showForm : !prevState.showForm, //prevState is current state before changes
       showAbout : false,
+      showExperience : false,
       showContact : false
       }
     })
@@ -154,7 +157,19 @@ class App extends Component {
       return {
       showAbout : !prevState.showAbout, //prevState is current state before changes
       showForm : false,
+      showExperience : false,
       showContact : false
+      }
+    })
+  }
+
+  toggleExperience() {
+    this.setState ((prevState )=> {
+      return {
+      showExperience : !prevState.showExperience, //prevState is current state before changes
+      showForm : false,
+      showContact : false,
+      showAbout : false
       }
     })
   }
@@ -164,7 +179,8 @@ class App extends Component {
       return {
       showContact : !prevState.showContact, //prevState is current state before changes
       showAbout : false,
-      showForm : false
+      showForm : false,
+      showExperience : false
       }
     })
   }
@@ -265,6 +281,7 @@ class App extends Component {
       <Navbar
       toggleForm={this.toggleForm}//turning on and off , making changes
       toggleAbout={this.toggleAbout}
+      toggleExperience={this.toggleExperience}
       toggleContact={this.toggleContact}
       />
       
@@ -272,6 +289,8 @@ class App extends Component {
        
         {this.state.showAbout && 
         <About/>}
+        {this.state.showExperience && 
+        <Experience/>}
         {this.state.showContact && 
         <Contact/>}
       
