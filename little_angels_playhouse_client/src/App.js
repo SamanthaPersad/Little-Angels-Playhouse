@@ -52,6 +52,10 @@ class App extends Component {
     this.toggleExperience = this.toggleExperience.bind(this)
     this.toggleContact = this.toggleContact.bind(this)
     
+
+    
+    
+    
   }
 
   cancel() {
@@ -204,6 +208,8 @@ class App extends Component {
     })
   }
 
+  
+
   submitNew() {
     const jwt = localStorage.getItem("jwt")
     const body = {"first_name": this.state.first_name, "last_name": this.state.last_name, "age": this.state.age, "class_id": this.state.class_id};
@@ -303,6 +309,7 @@ class App extends Component {
       toggleAbout={this.toggleAbout}
       toggleExperience={this.toggleExperience}
       toggleContact={this.toggleContact}
+ 
       />
       
         
@@ -314,6 +321,7 @@ class App extends Component {
         <Experience/>}
         {this.state.showContact && 
         <Contact/>}
+
       
         <div> {display} </div>
         {this.state.showForm &&
